@@ -79,6 +79,7 @@ class GoogleAILLMs:
             model=os.environ['GOOGLE_AI_MODEL'],
             temperature=temperature,
             google_api_key=os.environ['GOOGLE_AI_API_KEY'],
+            max_retries=0, 
         )
     
     def get_llm(self):
