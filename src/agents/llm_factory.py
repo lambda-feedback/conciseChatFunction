@@ -80,12 +80,6 @@ class GoogleAILLMs:
             temperature=temperature,
             google_api_key=os.environ['GOOGLE_AI_API_KEY'],
         )
-
-        #    This wrapper will catch errors and retry the call itself.
-        #    It does NOT pass 'max_retries' to the underlying model.
-        self._google_llm_with_retries = self._google_llm.with_retry(
-            stop_after_attempt=1,  # Corresponds to max_retries
-        )
     
     def get_llm(self):
-        return self._google_llm_with_retries
+        return self._google_llm
