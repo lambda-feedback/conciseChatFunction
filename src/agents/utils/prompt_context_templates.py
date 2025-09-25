@@ -73,7 +73,7 @@ Please tell me about the question you're working on. I'll use British English sp
 - Description: {content}
 {duration_text}
 
-> Note: Mathematical equations are in KaTeX format, preserve them the same. Use British English spellings.
+> Note: Mathematical equations are in KaTeX format, preserve them the same. Ensure mathematical equations are surrounded by one '$' for in-line equations and '$$' for block equations. Use British English spellings.
 
 ---
 """
