@@ -1,10 +1,14 @@
 import json
+
+
 try:
     from .src.module import chat_module
+    from .src.agents.utils.types import JsonType
 except ImportError:
     from src.module import chat_module
+    from src.agents.utils.types import JsonType
 
-def handler(event, context):
+def handler(event: JsonType, context):
     """
     Lambda handler function
     """
@@ -45,7 +49,7 @@ def handler(event, context):
     # Create a response
     response = {
         "statusCode": 200,
-        "body": chatbot_response
+        "body": json.dumps(chatbot_response)
     }
 
     # Log the response for debugging purposes
