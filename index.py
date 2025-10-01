@@ -1,6 +1,5 @@
 import json
 
-
 try:
     from .src.module import chat_module
     from .src.agents.utils.types import JsonType
@@ -35,8 +34,8 @@ def handler(event: JsonType, context):
             "body": "Missing 'params' key in event. Please confirm the key in the json body. Make sure it contains the necessary conversation_id."
         }
     
-    message = event.get("message", None)
-    params = event.get("params", None)
+    message = event.get("message")
+    params = event.get("params")
 
     try:
         chatbot_response = chat_module(message, params)
