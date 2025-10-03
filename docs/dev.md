@@ -1,14 +1,40 @@
-# YourFunctionName
-*Brief description of what this chat function does, from the developer perspective*
+# conciseChatFunction
+This chatbot aims to concisely respond to all relevant tasks the student requests based on the current Question they are working on. The Chatbot is aware of the Question details, answer, worked solution and guidance from the lecturer.
+
+Some technical details:
+<pre style="white-space: pre-wrap;">
+<code>LLM model: Gemini-2.0-flash (Google)
+response time (on average): 10 seconds
+
+Helping approach: provides short, direct answers without extra detail
+</code>
+</pre>
 
 ## Inputs
-*Specific input parameters which can be supplied when the calling this chat function.*
+Body:
+```JSON
+{
+    "message":"hi",
+    "params":{
+        "conversation_id":"12345Test",
+        "conversation_history":[{"type":"user","content":"hi"}],
+        "include_test_data": true,
+    }
+}
+```
 
 ## Outputs
-*Output schema/values for this function*
-
-## Examples
-*List of example inputs and outputs for this function, each under a different sub-heading*
+```JSON
+{
+    "chatbotResponse":"hi back",
+    "metadata": {
+        "summary": "",
+        "conversational_style": "",
+        "conversation_history": [],
+    },
+    "processing_time": 0
+}
+```
 
 ## Testing the Chat Function
 
