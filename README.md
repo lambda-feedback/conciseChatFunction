@@ -1,4 +1,4 @@
-# Lambda Feedback Chat Function Boilerplate
+# Lambda Feedback Concise Chat Function
 
 This repository contains the code needed to develop a modular chatbot to be used on Lambda-Feedback platform [written in Python].
 
