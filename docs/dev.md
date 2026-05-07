@@ -3,12 +3,23 @@ This chatbot aims to concisely respond to all relevant tasks the student request
 
 Some technical details:
 <pre style="white-space: pre-wrap;">
-<code>LLM model: Gemini-2.5-flash (Google)
-response time (on average): 10 seconds
+<code>LLM model: Gemini-2.5-flash-lite (Google)
+response time (on average): ~10 seconds
 
 Helping approach: provides short, direct answers without extra detail
 </code>
 </pre>
+
+## Behavioural Prompt
+
+**Role:** A tutor that gives short, direct answers.
+
+**Key behaviours from the role prompt**
+
+- **Direct and minimal:** answers the question and stops — no extra details, explanations, or examples unless the student asks.
+- **Aware of struggle:** if the student seems stuck or frustrated, references their progress so far and how long they have spent on the question relative to the teacher's guidance time.
+- **Stays on topic:** redirects unrelated questions back to the current material with a short refusal.
+- **No filler:** does not end messages with concluding statements or summaries.
 
 ## Testing the Chat Function
 
