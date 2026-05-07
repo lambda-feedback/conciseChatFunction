@@ -3,7 +3,7 @@ This chatbot aims to concisely respond to all relevant tasks the student request
 
 Some technical details:
 <pre style="white-space: pre-wrap;">
-<code>LLM model: Gemini-2.0-flash (Google)
+<code>LLM model: Gemini-2.5-flash (Google)
 response time (on average): 10 seconds
 
 Helping approach: provides short, direct answers without extra detail
@@ -80,7 +80,7 @@ Body (stringified within body for API request):
 {"body":"{\"conversationId\": \"12345Test\", \"messages\": [{\"role\": \"USER\", \"content\": \"hi\"}], \"user\": {\"type\": \"LEARNER\"}}"}
 ```
 
-Input Body with optional fields:
+Body with optional fields:
 ```json
 {
   "conversationId": "<uuid>",
@@ -156,7 +156,7 @@ Input Body with optional fields:
 }
 ```
 
-Output Response:
+Response:
 
 ```json
 {
